@@ -12,4 +12,4 @@ filterMap(filterCallback: (element: any) => boolean, mapCallback: (element: any)
 ```
 
 ### Acknowledgements:
-Adapted from MDN polyfills for Array.prototype.filter and Array.prototype.map.
+Adapted from MDN polyfills for [Array.prototype.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter#Polyfill) and [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map#Polyfill).
