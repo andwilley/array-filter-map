@@ -8,6 +8,7 @@ Polyfill (Array.prototype.filterMap) for filter and map in one trip through the 
 
 ### Why Not?
 * Commits the cardinal sin of extending native objects.
+* A better solution probably exists. :)
 
 ### Signature:
 ```typescript
