@@ -12,7 +12,8 @@ Polyfill (Array.prototype.filterMap) for filter and map in one trip through the 
 ### Signature:
 ```typescript
 filterMap(filterCallback: (element: any, index?: number, origArray?: any[]) => boolean,
-          mapCallback: (element: any, index?: number, origArray?: any[]) => Array<any>
+          mapCallback: (element: any, index?: number, origArray?: any[]) => Array<any>,
+          thisArg?: any
 ): Array<any>;
 ```
 
