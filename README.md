@@ -6,6 +6,9 @@ Polyfill (Array.prototype.filterMap) for filter and map in one trip through the 
 * Intuitive pattern is identical to Array.prototype.filter and Array.prototype.map, so use the same pattern when you have to do both instead of writing another one in Array.prototype.reduce.
 * More declarative than making reduce do both tasks.
 
+### Why Not?
+* Commits the cardinal sin of extending native objects.
+
 ### Signature:
 ```typescript
 filterMap(filterCallback: (element: any, index?: number, origArray?: any[]) => boolean,
