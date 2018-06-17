@@ -8,7 +8,9 @@ Polyfill (Array.prototype.filterMap) for filter and map in one trip through the 
 
 ### Signature:
 ```typescript
-filterMap(filterCallback: (element: any) => boolean, mapCallback: (element: any) => Array<any>): Array<any>;
+filterMap(filterCallback: (element: any, index?: number, origArray?: any[]) => boolean,
+          mapCallback: (element: any, index?: number, origArray?: any[]) => Array<any>
+): Array<any>;
 ```
 
 ### Acknowledgements:
