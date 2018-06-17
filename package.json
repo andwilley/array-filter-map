@@ -1,0 +1,27 @@
+{
+  "name": "filtermap",
+  "version": "1.0.0",
+  "description": "Polyfill (Array.prototype.filterMap) for filter and map in one trip through the target array.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andwilley/filterMap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andwilley/filterMap/issues"
+  },
+  "homepage": "https://github.com/andwilley/filterMap#readme",
+  "devDependencies": {
+    "@types/jest": "^23.1.0",
+    "@types/node": "^10.3.3",
+    "jest": "^23.1.0",
+    "ts-jest": "^22.4.6",
+    "typescript": "^2.9.2"
+  }
+}

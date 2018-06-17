@@ -1,8 +1,10 @@
 if (!Array.prototype.filterMap) {
     Array.prototype.filterMap = function filterMap(
             filterCallback: (element: any, index?: number, origArray?: any[]) => boolean,
-            mapCallback: (element: any, index?: number, origArray?: any[]) => any) {
-        let thisArg, origArrayIndex, newArrayIndex;
+            mapCallback: (element: any, index?: number, origArray?: any[]) => any,
+            thisArg?: any
+    ) {
+        let origArrayIndex, newArrayIndex;
         if (this == null) {
             throw new TypeError('this is null or not defined');
         }
@@ -25,10 +27,6 @@ if (!Array.prototype.filterMap) {
 
         const len = this.length >>> 0;
         const newArray = new Array(len);
-
-        if (arguments.length > 2) {
-            thisArg = arguments[2];
-        }
 
         origArrayIndex = 0;
         newArrayIndex = 0;
