@@ -8,12 +8,13 @@ Polyfill (Array.prototype.filterMap) for filter and map in one trip through the 
 
 ### Why Not?
 * Commits the cardinal sin of extending native objects.
-* A better solution probably exists. :)
+* It's not THAT much more efficient for small datasets.
+* The people you work with probably won't like it.
 
 ### Signature:
 ```typescript
-filterMap(filterCallback: (element: any, index?: number, origArray?: any[]) => boolean,
-          mapCallback: (element: any, index?: number, origArray?: any[]) => Array<any>,
+filterMap(filterCallback: (element: any, index?: number, origArray?: Array<T>) => boolean,
+          mapCallback: (element: any, index?: number, origArray?: Array<T>) => Array<any>,
           thisArg?: any
 ): Array<any>;
 ```
