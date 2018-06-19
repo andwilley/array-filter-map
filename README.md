@@ -7,7 +7,7 @@ Polyfill (Array.prototype.filterMap) for filter and map in one trip through the 
 * More declarative than making reduce do both tasks.
 
 ### Why Not?
-* Commits the cardinal sin of extending native objects.
+* Commits a cardinal sin of extending native objects.
 * It's not THAT much more efficient for small datasets.
 * The people you work with probably won't like it.
 
@@ -17,6 +17,16 @@ filterMap(filterCallback: (element: any, index?: number, origArray?: Array<T>) =
           mapCallback: (element: any, index?: number, origArray?: Array<T>) => Array<any>,
           thisArg?: any
 ): Array<any>;
+```
+
+### Example Usage:
+```typescript
+const testArray = [{id: 1, value: 'test 1'}, {id: 2, value: 'test 2'}, {id: 3, value: 'test 3'}];
+const newArray = testArray.filterMap(
+    (element) => element.id === 2,
+    (element) => element.value
+);
+// newArray = ['test 2']
 ```
 
 ### Acknowledgements:
