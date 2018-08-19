@@ -6,7 +6,6 @@ export function arrayFilterMap<T, K>(
     mapCallback: (element: T, index?: number, origArray?: T[]) => K,
     thisArg?: any
 ): K[] {
-    let origArrayIndex, newArrayIndex;
     if (typeof filterCallback !== 'function') {
         throw new TypeError(filterCallback + ' is not a function');
     }
