@@ -1,6 +1,6 @@
-import './index';
+import { arrayFilterMap } from './'
 
-describe('filterMap test suite', () => {
+describe('arrayFilterMap test suite', () => {
     const testArray = [{
         id: 1,
         value: 'test 1',
@@ -20,43 +20,46 @@ describe('filterMap test suite', () => {
     global.console = {
         warn: jest.fn()
     };
-    it('should add filterMap to the Array prototype', () => {
-        expect(Array.prototype.filterMap).not.toBe(undefined);
-    });
     it('should return a new array', () => {
-        expect(testArray.filterMap(
+        expect(arrayFilterMap(
+            testArray,
             () => true,
             element => element
         )).not.toBe(testArray);
     });
     it('should map each item of the array to its "id" propery', () => {
-        expect(testArray.filterMap(
+        expect(arrayFilterMap(
+            testArray,
             () => true,
             element => element.id
         )).toEqual([1, 2, 3]);
     });
     it('should filter out all values', () => {
-        expect(testArray.filterMap(
+        expect(arrayFilterMap(
+            testArray,
             () => false,
             element => element,
         )).toEqual([]);
     });
     it('should warn about index usage', () => {
-        [1, 2].filterMap(
+        arrayFilterMap(
+            [1, 2],
             (element, index, origArray) => true,
             (element, index, origArray) => element,
         );
         expect(console.warn).toHaveBeenCalledTimes(2);
     });
     it('should use thisArg as "this" when passed as 3rd argument', () => {
-        expect(testArray.filterMap(
+        expect(arrayFilterMap(
+            testArray,
             function () { return true; },
             function (element) { return this.id; },
             thisTestObj
         )).toEqual([4, 4, 4]);
     });
     it('should use the index and origArray parameters as specified for each callback', () => {
-        expect(testArray.filterMap(
+        expect(arrayFilterMap(
+            testArray,
             (element, index, origArray) => {
                 origArray[index].value = `${origArray[index].value} filter`;
                 return true;
@@ -69,7 +72,8 @@ describe('filterMap test suite', () => {
     });
     it('should throw an error for filterCallback not a function', () => {
         expect(() => {
-            testArray.filterMap(
+            arrayFilterMap(
+                testArray,
                 'Dude, this',
                 (element) => element.id
             )}
@@ -77,7 +81,8 @@ describe('filterMap test suite', () => {
     });
     it('should throw an error for mapCallback not a function', () => {
         expect(() => {
-            testArray.filterMap(
+            arrayFilterMap(
+                testArray,
                 () => true,
                 'Dude, this'
             )}
@@ -88,7 +93,8 @@ describe('filterMap test suite', () => {
         biggerButNotUnreasonableDataset.push({id: i, value: `test ${i}`});
     }
     it('--->                     this (filterMap()):...', () => {
-        biggerButNotUnreasonableDataset.filterMap(
+        arrayFilterMap(
+            biggerButNotUnreasonableDataset,
             (element) => element.id > 700000,
             (element) => element.value
         );
