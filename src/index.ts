@@ -13,12 +13,12 @@ export function arrayFilterMap<T, K>(
     }
     if (filterCallback.length > 1) {
         console.warn('WARNING: use of the index parameter in "filterCallback"\
-for filterMap may not operate as you expect. Array elements may not be mapped to the\
+for arrayFilterMap may not operate as you expect. Array elements may not be mapped to the\
 same index in the returned array depending on the result of filterCallback.');
     }
     if (mapCallback.length > 1) {
         console.warn('WARNING: use of the index parameter in "mapCallback" or\
-for filterMap may not operate as you expect. Array elements may not be mapped to the\
+for arrayFilterMap may not operate as you expect. Array elements may not be mapped to the\
 same index in the returned array depending on the result of filterCallback.');
     }
 
