@@ -13,10 +13,10 @@ filter and map in one trip through the target array.
 ```typescript
 arrayFilterMap<T, K>(
     targetArray: T[],
-    filterCallback: (element: T, index?: number, origArray?: Array<T>) => boolean,
-    mapCallback: (element: T, index?: number, origArray?: Array<T>) => Array<K>,
+    filterCallback: (element: T, index?: number, origArray?: T[]) => boolean,
+    mapCallback: (element: T, index?: number, origArray?: T[]) => K[],
     thisArg?: any
-): Array<K>;
+): K[];
 ```
 
 ### Example Usage:
