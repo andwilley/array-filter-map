@@ -35,7 +35,7 @@ function arrayFilterMap(
     mapCallback = mapCallback.bind(thisArg);
   }
 
-  return targetArray.reduce((newArr, val, i, entireArr, t) => {
+  return targetArray.reduce((newArr, val, i, entireArr) => {
     if (filterCallback(val, i, entireArr)) {
       newArr.push(mapCallback(val, i, entireArr));
     }
