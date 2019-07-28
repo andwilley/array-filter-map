@@ -1,4 +1,4 @@
-# arrayFilterMap
+# array-filter-map
 Filter and map in one trip through the target array.
 
 ### Why?
@@ -28,7 +28,7 @@ function arrayFilterMap<T,R>(
 
 ### Example Usage:
 ```javascript
-const filtermap = require('filtermap');
+const filtermap = require('array-filter-map');
 
 const testArray = [{id: 1, value: 'test 1'}, {id: 2, value: 'test 2'}, {id: 3, value: 'test 3'}];
 const newArray = filtermap(
