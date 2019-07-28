@@ -1,4 +1,4 @@
-declare module "filtermap" {
+declare module "array-filter-map" {
     function arrayFilterMap<T,R>(
         targetArray: T[],
         filterCallback: (element: T, index: number, origArray: T[]) => boolean,
