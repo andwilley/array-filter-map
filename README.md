@@ -10,7 +10,7 @@ Filter and map in one trip through the target array.
 * It's not THAT much more efficient for small arrays.
 * It's not that hard to write it yourself.
 
-# Install
+### Install
 
 ```bash
 npm install array-filter-map
