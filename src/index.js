@@ -13,7 +13,7 @@ function arrayFilterMap(
   targetArray,
   filterCallback,
   mapCallback,
-  thisArg = undefined
+  thisArg
 ) {
   if (typeof filterCallback !== "function") {
     throw new TypeError(filterCallback + " is not a function");
