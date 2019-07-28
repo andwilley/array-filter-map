@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andwilley/filtermap.git"
+    "url": "git+https://github.com/andwilley/array-filter-map.git"
   },
   "keywords": [
     "filter",
@@ -18,9 +18,9 @@
   "author": "Drew Willey",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andwilley/filtermap/issues"
+    "url": "https://github.com/andwilley/array-filter-map/issues"
   },
-  "homepage": "https://github.com/andwilley/filtermap#readme",
+  "homepage": "https://github.com/andwilley/array-filter-map#readme",
   "devDependencies": {
     "jest": "^24.8.0"
   }

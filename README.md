@@ -13,7 +13,7 @@ Filter and map in one trip through the target array.
 # Install
 
 ```bash
-npm install filtermap
+npm install array-filter-map
 ```
 
 ### Signature:
