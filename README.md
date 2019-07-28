@@ -4,7 +4,7 @@ Filter and map in one trip through the target array.
 ### Why?
 * Faster for large arrays than chaining filter and map (negligable for small ones...). Only goes through the target array once. Uses Array.prototype.reduce().
 * Intuitive pattern is almost identical to Array.prototype.filter and Array.prototype.map, so use the same pattern when you have to do both instead of writing another one in Array.prototype.reduce.
-* More declarative than making reduce do both tasks.
+* Reusable, avoid writing reduce to do both tasks every time you need it.
 
 ### Why Not?
 * It's not THAT much more efficient for small arrays.
@@ -38,6 +38,9 @@ const newArray = filtermap(
 );
 // newArray = ['test 2']
 ```
+
+#### Of Note:
+The index parameter in the mapCallback will reference the index of the element in the original array, but possibly not the resultant array depending on the results of the filterCallback.
 
 ### Test Results (jest):
 ```
