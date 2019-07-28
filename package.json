@@ -1,41 +1,27 @@
 {
   "name": "filtermap",
-  "version": "1.0.0",
-  "description": "Polyfill (Array.prototype.filterMap) for filter and map in one trip through the target array.",
-  "main": "/src/index.ts",
+  "version": "1.1.0",
+  "description": "Filter and Map in one trip through the target array.",
+  "main": "./src/index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andwilley/filterMap.git"
+    "url": "git+https://github.com/andwilley/filtermap.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "filter",
+    "map"
+  ],
+  "author": "Drew Willey",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andwilley/filterMap/issues"
+    "url": "https://github.com/andwilley/filtermap/issues"
   },
-  "homepage": "https://github.com/andwilley/filterMap#readme",
+  "homepage": "https://github.com/andwilley/filtermap#readme",
   "devDependencies": {
-    "@types/jest": "^23.1.0",
-    "@types/node": "^10.3.3",
-    "jest": "^23.1.0",
-    "ts-jest": "^22.4.6",
-    "typescript": "^2.9.2"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
+    "jest": "^24.8.0"
   }
 }

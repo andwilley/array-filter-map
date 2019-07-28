@@ -1,6 +1,9 @@
-declare interface Array<T> {
-    filterMap(filterCallback: (element: any, index?: number, origArray?: Array<T>) => boolean,
-              mapCallback: (element: any, index?: number, origArray?: Array<T>) => Array<any>,
-              thisArg?: any
-    ): Array<any>;
+declare module "filtermap" {
+    function arrayFilterMap<T,R>(
+        targetArray: T[],
+        filterCallback: (element: T, index: number, origArray: T[]) => boolean,
+        mapCallback: (element: T, index: number, origArray: T[]) => R,
+        thisArg?: any
+    ): R[];
+    export = arrayFilterMap;
 }
